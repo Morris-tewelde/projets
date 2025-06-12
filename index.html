@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDF Project Viewer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="logo.jpg" alt="Logo" class="logo" />
+      <h1>Project PDF Viewer</h1>
+    </header>
+
+    <div class="search-sort-container">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search by name or city..." onkeyup="searchTable()" />
+      </div>
+    </div>
+
+    <table id="pdfTable" class="projects-list" data-sort-dir="asc">
+      <thead>
+        <tr>
+          <th><button class="sort-btn" onclick="sortTable(0)">Project Name</button></th>
+          <th><button class="sort-btn" onclick="sortTable(1)">City</button></th>
+          <th><button class="sort-btn" onclick="sortTable(2)">Date</button></th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows injected via JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
